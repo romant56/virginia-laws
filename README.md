@@ -4,7 +4,7 @@ This is a simple, proof of concept program that collects a list of csv files hos
 
 ### How many laws are there in Virginia?
 
-This is a difficult quetion to answer.  When we think of laws, we are usually thinking of something like a penal code section for a crime, like theft.  However, a criminal code section is just one very small part of what constitutes "laws" in general.  In addiction to state criminal code statues (criminal laws explicitly enacted by a legislative body), there are: constitutions, civil statutes, executive orders, and regulations.  Furthermore, these exist not only on the state level in America, but also on a much larger federal level.  There are local city and county ordinances.
+This is a difficult quetion to answer.  When we think of laws, we are usually thinking of something like a penal code section for a crime, like theft.  However, a criminal code section is just one very small part of what constitutes "laws" in general.  In addiction to state criminal code statues (criminal laws explicitly enacted by a legislative body), there are: constitutions, civil statutes, executive orders, and regulations.  Furthermore, these exist not only on the state level in America, but also on a much larger federal level.  There are also local city and county ordinances.
 
 However, when most people refer to laws (at the state level for this project), they are usually referring to those statutes that are published in a large code and have code section numbers.  This program counts statutes in the Code of Virginia.
 
@@ -21,7 +21,7 @@ An example statute looks like this:
 
 ### Program overview
 
-The program first retrieves a JSON list of all the titles (similar to a chapter by subject in a book), converts that to a dictionary of title numbers and addresses of where each title's csv is stored, and then parses each line in the csv and counts it.
+The program first retrieves a JSON list of all the titles in the Code of Virginia (similar to a chapter by subject in a book), converts that to a dictionary of title numbers and addresses of where each title's csv is stored, and then parses each line in the csv and counts it.
 
 ### What are we checking each line for?
 
