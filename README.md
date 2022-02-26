@@ -4,7 +4,7 @@ This is a simple, proof of concept program that collects a list of csv files hos
 
 ### How many laws are there in Virginia?
 
-This is a difficult quetion to answer.  When we think of laws, we are usually thinking of something like a penal code section for a crime, like theft.  However, a criminal code section is just one very small part of what constitutes "laws" in general.  In addiction to state criminal code statues (criminal laws explicitly enacted by a legislative body), there are: constitutions, civil statutes, executive orders, and regulations.  Furthermore, these exist not only on the state level in America, but also on a much larger federal level.  There are also local city and county ordinances.
+This is a difficult quetion to answer.  When we think of laws, we are usually thinking of something like a penal code section for a crime, like theft.  However, a criminal code section is just one very small part of what constitutes "laws" in general.  In addition to state criminal code statues (criminal laws explicitly enacted by a legislative body), there are: constitutions, civil statutes, executive orders, and regulations.  Furthermore, these exist not only on the state level in America, but also on a much larger federal level.  There are also local city and county ordinances.
 
 However, when most people refer to laws (at the state level for this project), they are usually referring to those statutes that are published in a large code and have code section numbers.  This program counts statutes in the Code of Virginia.
 
