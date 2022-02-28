@@ -28,6 +28,9 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/201
 req = urllib.request.Request(url=page, headers=headers)
 try:
     filein = urllib.request.urlopen(req)
+except IOError as error:
+    print("File could not be found.")
+
 
 # create local list of dictionaries
 for item in filein:
@@ -45,3 +48,4 @@ for item in titleList.items():
     codeTotal += law_count(item)
 
 print("\n" + "This is a grand total of " + f'{codeTotal:,}' + " currently active laws in the Code of Virginia")
+filein.close()
