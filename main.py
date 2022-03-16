@@ -11,11 +11,11 @@ def law_count(title):
     req = urllib.request.Request(url=title[1], headers=headers)
     filein = urllib.request.urlopen(req)
 
-    # checks string to make sure 'Repealed' or 'Reserved' or 'Effective until' do not appear at beginning of statute body
+    # checks string to make sure 'Repealed' or 'Reserved' or 'Effective until' or 'Expired"do not appear only at beginning of statute body
     # otherwise counts and prints and returns total
     total = 0
     for line in filein:
-        if "|Repealed" not in str(line) and "|Reserved" not in str(line) and "|(Effective unt" not in str(line):
+        if "|Repeale" not in str(line) and "|Reserved." not in str(line) and "|(Effective u" not in str(line) and "|Expired." not in str(line):
             total += 1
     print("There are currently", total, "active laws in Title", title[0], "of the Code of Virginia.")
     return total
@@ -26,7 +26,11 @@ page = "https://law.lis.virginia.gov/api/CoVTitlesGetListOfJson"
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
 req = urllib.request.Request(url=page, headers=headers)
-filein = urllib.request.urlopen(req)
+try:
+    filein = urllib.request.urlopen(req)
+except IOError as error:
+    print("File could not be found.")
+
 
 # create local list of dictionaries
 for item in filein:
@@ -44,3 +48,4 @@ for item in titleList.items():
     codeTotal += law_count(item)
 
 print("\n" + "This is a grand total of " + f'{codeTotal:,}' + " currently active laws in the Code of Virginia")
+filein.close()
