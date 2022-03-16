@@ -1,3 +1,7 @@
+merged 3/16/22 to add try block and make slight correction to search algorithm and improve search efficiency
+
+
+
 # virginia-laws
 
 This is a simple, proof of concept program that collects a list of csv files hosted by the Virginia Law Online Library, parses them, and prints a total and subtotals.
