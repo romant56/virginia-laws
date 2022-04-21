@@ -1,6 +1,5 @@
 import urllib.request
 import json
-tsttesttest
 
 
 # prints count of qualifying lines in title and returns that count
@@ -25,7 +24,7 @@ def law_count(title):
 # JSON of all titles stored by Virginia Law Online Library
 page = "https://law.lis.virginia.gov/api/CoVTitlesGetListOfJson"
 
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
+headers = {'User-Agent': 'Mozilla/5.0 (indows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
 req = urllib.request.Request(url=page, headers=headers)
 try:
     filein = urllib.request.urlopen(req)
